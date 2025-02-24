@@ -1,0 +1,14 @@
+---
+
+const {title,icon,description} = Astro.props
+---
+
+<div class="flex p-5 bg-white drop-shadow-md flex-col gap-5">
+  <div class="flex justify-between items-center gap-5">
+    <p class="text-xl font-bold font-poppins"> {title}</p>
+    <img src={icon} alt={title}>
+  </div>
+  <p class="text-md font-poppins">
+    {description}
+  </p>
+</div>

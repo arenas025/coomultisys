@@ -1,0 +1,30 @@
+---
+import '../../styles/global.css';
+---
+
+<div class=" py-10  flex flex-col rounded-sm justify-center items-center bg-[#EDEDED]">
+  <p class="text-2xl font-bold font-poppins">
+    Comunicate con nosotros
+  </p>
+  <p class="text-md font-poppins">
+    Escribenos y solucionaremos tus dudas
+  </p>
+<form class="flex flex-col gap-5 mt-10" action="post">
+  <div class="flex flex-row gap-2">
+  <div class="flex flex-col gap-2">
+    <label class="text-sm font-poppins" for="nombre">Nombre</label>
+    <input type="text" name="nombre" class="bg-white rounded-md p-2" id="nombre" />
+  </div>
+  <div class="flex flex-col gap-2">
+    <label class="text-sm font-poppins" for="email">Email</label>
+    <input type="email" name="email" class="bg-white rounded-md p-2" id="email" />
+  </div>
+  </div>
+  <div class="flex flex-col gap-2">
+    <label class="text-sm font-poppins" for="mensaje">¿Cómo podemos ayudarte?</label>
+    <textarea name="mensaje" class="bg-white rounded-md p-2 resize-none" id="mensaje"></textarea>
+  </div>
+  <button class="bg-yellow-primary cursor-pointer text-white rounded-md p-2" type="submit">Enviar</button>
+</form>
+
+</div>

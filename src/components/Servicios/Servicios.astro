@@ -1,0 +1,51 @@
+---
+import '../../styles/global.css';
+import CardComponent from './CardComponent';
+
+const services = [
+  {
+    title: "Eliminación de reportes negativos en centrales de riesgo",
+    description: "El servicio de eliminación de reportes negativos en centrales de riesgo está diseñado para ayudar a las personas a mejorar su historial crediticio y recuperar su acceso a oportunidades financieras.",
+    image: "/reporte-negativo.png"
+  },
+  {
+    title: "Aumento de score o puntaje financiero",
+    description: "Este servicio está diseñado para optimizar tu puntaje crediticio, ayudándote a acceder a mejores condiciones en préstamos, tarjetas de crédito y otros productos financieros.",
+    image: "/score.png"
+  },
+  {
+    title: "Asesorías financieras en créditos bancarios",
+    description: "Te brindamos orientación personalizada para que encuentres la opción de crédito que mejor se adapte a tus necesidades, asegurando que tomes decisiones informadas y favorables para tu futuro financiero.",
+    image: "/asesorias.png"
+  }, 
+  {
+    title: "Eliminación de castigos",
+    description: "Te ayudamos a eliminar sanciones y restricciones en tu historial financiero, permitiéndote recuperar la confianza de las entidades bancarias y acceder nuevamente a oportunidades de crédito.",
+    image: "/castigos.png"
+  },
+  {
+    title: "Créditos por libranzas para reportados",
+    description: "Accede a financiamiento sin importar tu historial en centrales de riesgo, a través de créditos por libranza con descuentos directos de nómina, facilitando el pago y reduciendo el riesgo de sobreendeudamiento.",
+    image: "/creditos.png"
+  },
+  {
+    title: "Compra de cartera",
+    description: "Te ofrecemos la posibilidad de unificar tus deudas en una sola cuota con tasas de interés más bajas, permitiéndote mejorar tu liquidez y aliviar tu carga financiera de manera eficiente.",
+    image: "/compra.png"
+  },
+  
+  
+]
+
+---
+
+<section id="servicios" class=' flex flex-col gap-5 '>
+  <h2 class="text-center mt-10 text-3xl text-yellow-primary ">
+    Nuestros servicios
+  </h2>
+  <div class="grid grid-cols-1 justify-items-center sm:grid-cols-2 md:grid-cols-3 gap-10 self-center w-[90%]  xl:px-30">
+  {services.map((service) => (
+<CardComponent title={service.title} description={service.description} image={service.image} client:only="react" />
+  ))}
+  </div>
+</section>

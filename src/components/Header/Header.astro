@@ -1,0 +1,33 @@
+---
+import '../../styles/global.css';
+
+const links = [
+  {
+    label: 'SERVICIOS',
+    href: '/'
+  },
+  {
+    label: 'QUIENES SOMOS',
+    href: '/'
+  },
+  {
+    label: 'CONTACTO',
+    href: '/'
+  }
+]
+---
+
+<header class="bg-black">
+    <nav class="flex px-10 py-2 justify-between items-center">
+      <div>
+
+        <img onclick="window.location.href = '/'" src="/logo-coomultisys.png" class="cursor-pointer w-32" alt="logo" />
+
+      </div>
+      <div class="hidden md:flex gap-4 text-white">
+        {links.map((link) => (
+          <a class=" cursor-pointer text-md font-montserrat" href={link.href}>{link.label}</a>
+        ))}
+      </div>
+    </nav>
+</header>

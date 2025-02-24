@@ -1,0 +1,41 @@
+---
+import '../../styles/global.css';
+import Formulario from './Formulario.astro';
+
+const contacto =[{
+  icon: "/whatsapp.png",
+  info:'316 448 7881',
+  link:'https://wa.me/573164487881?text=Hola,%20tengo%20algunas%20dudas%20sobre%20sus%20servicios%20y%20me%20gustar%C3%ADa%20recibir%20m%C3%A1s%20informaci%C3%B3n.%20%C2%BFPodr%C3%ADan%20ayudarme%3F'
+},{
+  icon: "/facebook.png",
+  info:'Coomultisys Tolima',
+  link:'https://web.facebook.com/profile.php?id=61573065129330'
+},{
+  icon: "/mail.png",
+  info:'serviosfinancieros@coomultisys.com',
+  link:'mailto:serviosfinancieros@coomultisys.com'
+},{
+  icon: "/maps.png",
+  link:'https://maps.app.goo.gl/FS33cUdsXozqAUga6',
+  info:'Mz 1 casa 16 etapa 2 praderas santa Rita (Ibagué, Tolima)'
+}]
+---
+
+
+<section class="flex justify-center items-center h-[500px] mt-[150px] "> 
+<div class=" flex-col  items-start justify-center flex w-[60%] h-[60%]">
+  <p class="text-5xl font-poppins  text-yellow-primary ">Contáctanos</p>
+  <p class="text-xl font-poppins w-[70%] mt-2">Si tienes alguna duda, llena el formulario o contáctanos por nuestras redes sociales</p>
+  <div class="flex flex-col mt-10 gap-4">
+    {contacto.map((item) => (
+      <a href={item.link} class="flex flex-row items-center gap-2" target="_blank">
+        <img src={item.icon} alt={item.info} class="w-[30px] h-[30px]" />
+        <p class="text-xl font-poppins">{item.info}</p>
+      </a>
+    ))}
+  </div>
+</div>
+<div class="w-[30%]">
+  <Formulario />
+</div>
+</section>

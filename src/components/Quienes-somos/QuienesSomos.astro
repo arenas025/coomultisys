@@ -1,0 +1,26 @@
+---
+import '../../styles/global.css';
+import MisionVision from './MisionVision/MisionVision.astro';
+import Valores from './MisionVision/Valores.astro';
+---
+
+<section id="quienes-somos" class="flex flex-col gap-5 w-[90%] mx-auto  ">
+  <h2 class="text-left mt-[200px] text-3xl text-yellow-primary ">
+    Quienes somos
+  </h2>
+  <section>
+   <div class="flex items-center flex-row gap-5">
+    <div class="w-[60%]">
+      <div class="flex flex-col gap-5">
+        <p class="text-6xl font-bold">Tu aliado financiero en Ibagué. </p>
+        <p class="text-4xl ">Soluciones y asesoría especializada para tu bienestar</p>
+        <p class="text-2xl ">Ofrecemos herramientas y servicios que te permitan mejorar tu vida financiera, todo de manera ágil y confiable.</p>
+      </div>
+    <button class="bg-yellow-primary mt-10 cursor-pointer self-center text-white px-10 py-2 rounded-[10px] font-poppins text-xl ">Conoce más</button>
+    </div>
+    <img src="/quienes-somos.png" class="h-[550px]" alt="quienes-somos" />
+    </div> 
+  </section>
+  <MisionVision />
+  <Valores />
+</section>
