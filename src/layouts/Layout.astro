@@ -1,5 +1,5 @@
 ---
-import Header from "../components/Header/Header.astro";
+import Header from "../components/Header/Header";
 import Footer from "../components/Footer/Footer.astro";
 ---
 
@@ -13,7 +13,7 @@ import Footer from "../components/Footer/Footer.astro";
 		<title>Coomultisys</title>
 	</head>
 	<body>
-		<Header />
+		<Header client:only="react" />
 		<slot />
 		<Footer />
 	</body>

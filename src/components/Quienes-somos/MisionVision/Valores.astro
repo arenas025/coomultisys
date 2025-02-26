@@ -28,9 +28,9 @@ const valores = [
 
 <div class="flex flex-col  gap-5">
   <p class="text-xl underline text-yellow-primary ">Valores</p>
-  <div class="flex w-[90%] mx-auto gap-20">
-  <img src="/valores.png" alt="valores" class="w-[40%] rounded-sm h-[500px] object-cover ">
-  <div class="grid-cols-2 w-[50%] grid gap-10 " >
+  <div class="flex lg:w-[90%] w-[100%]  lg:flex-row flex-col max-w-[1400px] mx-auto gap-20">
+  <img src="/valores.png" alt="valores" class="lg:w-[40%] w-[100%] rounded-sm lg:h-[500px] h-[200px] object-cover ">
+  <div class="grid-cols-2 lg:w-[50%] w-[100%] grid gap-10 " >
     {valores.map((valor) => (
       <ValoresCard title={valor.title} icon={valor.icon} description={valor.description} />
     ))}
