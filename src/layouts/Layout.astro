@@ -13,17 +13,10 @@ import Footer from "../components/Footer/Footer.astro";
 		<title>Coomultisys</title>
 	</head>
 	<body>
+		<!-- Disable when active -->
 		<Header client:only="react" />
 		<slot />
-		<Footer />
+		<!-- <Footer /> -->
 	</body>
 </html>
 
-<style>
-	html,
-	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
-	}
-</style>
