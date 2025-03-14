@@ -1,6 +1,7 @@
 ---
 import '../../styles/global.css';
 import CardComponent from './CardComponent';
+import CarrouselComponent from './CarrouselComponent';
 
 const services = [
   {
@@ -33,19 +34,18 @@ const services = [
     description: "Te ofrecemos la posibilidad de unificar tus deudas en una sola cuota con tasas de interés más bajas, permitiéndote mejorar tu liquidez y aliviar tu carga financiera de manera eficiente.",
     image: "/compra.png"
   },
-  
-  
 ]
 
 ---
 
-<section id="servicios" class=' flex flex-col pt-20 gap-5 '>
+<section id="servicios" class=' flex flex-col pt-20 gap-10 lg:gap-5 '>
   <h2 class="text-center mt-10 text-3xl text-yellow-primary ">
     Nuestros servicios
   </h2>
-  <div class="grid grid-cols-1 justify-items-center sm:grid-cols-2 md:grid-cols-3 gap-10 self-center w-[90%]  xl:px-30">
+  <div class="md:grid hidden grid-cols-1 justify-items-center sm:grid-cols-2 md:grid-cols-3 gap-10 self-center w-[90%]  xl:px-30">
   {services.map((service) => (
-<CardComponent title={service.title} description={service.description} image={service.image} client:only="react" />
+  <CardComponent title={service.title} description={service.description} image={service.image} client:only="react" />
   ))}
   </div>
+  <CarrouselComponent client:only="react" />
 </section>

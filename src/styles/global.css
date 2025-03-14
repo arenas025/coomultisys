@@ -6,10 +6,7 @@ html{
   scroll-behavior: smooth;
 }
 
-* {
-  height: 100%;
-  background-color: black;
-}
+
 
 #quienes-somos{
   scroll-margin-top: 100px;

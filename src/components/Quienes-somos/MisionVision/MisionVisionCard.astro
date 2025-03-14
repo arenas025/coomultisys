@@ -4,8 +4,8 @@
 const {title, description, image,icon} = Astro.props
 ---
 
-<div class="flex relative flex-col">
-  <img src={image} class="lg:h-[400px] h-[200px]" alt={title} >
+<div class="flex lg:max-w-auto max-w-[400px] relative flex-col">
+  <img src={image} class="lg:h-[300px] h-[200px]" alt={title} >
   <div class=" relative p-4 items-center  bg-white drop-shadow-md w-[80%] self-center -top-20  flex flex-col gap-5">
     <p class="lg:text-2xl text-lg font-poppins font-bold">
       {title}

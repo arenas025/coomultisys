@@ -22,7 +22,7 @@ const Header: React.FC = () => {
           />
         </div>
 
-        <div className="hidden md:flex gap-4 text-white">
+        <div className="hidden lg:flex gap-4 text-white">
           {links.map((link) => (
             <a
               key={link.href}

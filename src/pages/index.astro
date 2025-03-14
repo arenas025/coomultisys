@@ -7,17 +7,12 @@ import Layout from '../layouts/Layout.astro';
 
 ---
 
-<!-- <Layout> -->
-		<!-- Disable when active -->
-
-	<!-- <Banner  />
+<Layout>
+	<Banner  />
 	<Servicios />
 	<QuienesSomos />
-	<Contacto/> -->
-<!-- </Layout> -->
-<div class="disabled">
-	<img src="/logo-coomultisys.png"   alt="banner" />
-</div>
+	<Contacto/>
+</Layout>
 
 
 <style>
@@ -28,18 +23,5 @@ import Layout from '../layouts/Layout.astro';
 		height: 100%;
 	}
 
-	.disabled{
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		width: 100vw;
-		height: 100vh;
-		background-color: black;
-	}
-
-	.disabled img{
-		width: 200px;
-		height:200px;
-		object-fit: contain;
-	}
+	
 </style>

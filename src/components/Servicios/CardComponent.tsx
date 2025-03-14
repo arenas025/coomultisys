@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { motion, AnimatePresence } from "motion/react";
 
 interface CardProps {
   title: string;
@@ -27,11 +28,19 @@ export default function CardComponent({
         <p className="font-poppins text-center font-bold text-md md:text-xl ">
           {title}
         </p>
-        {showDescription && (
-          <p className="font-poppins mt-10 px-1 text-justify lg:pb-10 text-sm  lg:text-xl ">
-            {description}
-          </p>
-        )}
+        <AnimatePresence>
+          {showDescription && (
+            <motion.p
+              className="font-poppins mt-5 px-1 text-justify lg:pb-5 text-sm lg:text-xl"
+              initial={{ opacity: 0, height: 0 }}
+              animate={{ opacity: 1, height: "auto" }}
+              exit={{ opacity: 0, height: 0 }}
+              transition={{ duration: 0.3, ease: "easeInOut" }}
+            >
+              {description}
+            </motion.p>
+          )}
+        </AnimatePresence>
       </div>
     </div>
   );

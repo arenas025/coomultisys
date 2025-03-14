@@ -1,11 +1,14 @@
 ---
 import Header from "../components/Header/Header";
 import Footer from "../components/Footer/Footer.astro";
+import { SEO } from "astro-seo";
+
 ---
 
 <!doctype html>
 <html lang="en">
 	<head>
+		<SEO title="Coomultisys" description="Cooperativa en Ibagué especializada en préstamos, asesorías financieras y eliminación de reportes negativos en Datacrédito. Brindamos soluciones confiables para mejorar tu bienestar financiero."/>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -13,10 +16,9 @@ import Footer from "../components/Footer/Footer.astro";
 		<title>Coomultisys</title>
 	</head>
 	<body>
-		<!-- Disable when active -->
 		<Header client:only="react" />
 		<slot />
-		<!-- <Footer /> -->
+		<Footer />
 	</body>
 </html>
 
