@@ -47,5 +47,8 @@ const services = [
   <CardComponent title={service.title} description={service.description} image={service.image} client:only="react" />
   ))}
   </div>
+  <div class="block md:hidden">
   <CarrouselComponent client:only="react" />
+
+  </div>
 </section>

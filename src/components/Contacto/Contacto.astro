@@ -22,11 +22,12 @@ const contacto =[{
 ---
 
 
-<section id="contacto" class="flex justify-center lg:flex-row flex-col items-center mx-auto max-w-[1700px] lg:h-[500px] mt-[100px] lg:mt-[150px] "> 
-<div class=" flex-col items-center lg:items-start justify-center flex lg:w-[60%] w-[90%] h-[60%]">
+<section id="contacto" class="flex justify-center pb-10  flex-col items-center mx-auto max-w-[1700px] lg:h-fit mt-[100px] lg:mt-[150px] "> 
+<div class="flex flex-col lg:flex-row ">
+<div class=" flex-col items-center lg:items-start justify-center flex lg:w-[60%] w-[100%] h-[60%]">
   <p class="lg:text-5xl text-3xl font-poppins  text-yellow-primary  ">Contáctanos</p>
   <p class="lg:text-xl text-sm font-poppins w-[70%] mt-2">Si tienes alguna duda, llena el formulario o contáctanos por nuestras redes sociales</p>
-  <div class="flex flex-col mt-10 gap-4">
+  <div class="flex flex-col p-4 mt-10 gap-4">
     {contacto.map((item) => (
       <a href={item.link} class="flex flex-row items-center gap-2" target="_blank">
         <img src={item.icon} alt={item.info} class="lg:w-[30px] lg:h-[30px] w-[20px] h-[20px]" />
@@ -35,7 +36,15 @@ const contacto =[{
     ))}
   </div>
 </div>
-<div class="lg:w-[35%] mt-10 lg:mt-0 w-[90%]">
+<div class="lg:w-[35%] mx-auto mt-10 lg:mt-0 w-[90%]">
   <Formulario />
+</div>
+</div>
+<div>
+<p class="lg:text-5xl mt-20 text-3xl text-center mb-10 font-poppins  text-yellow-primary block ">Nuestras oficinas</p>
+<div class="flex w-[100%] lg:w-[70%] gap-10 justify-between flex-col lg:flex-row items-center ">
+<img src="/imagen-1-oficina.jpeg" alt="maps" class="lg:w-[500px] rounded-lg lg:h-[400px] w-[280px] h-[200px]" />
+<img src="/imagen-2-oficina.jpeg" alt="maps" class="lg:w-[500px] rounded-lg lg:h-[400px] w-[280px] h-[200px]" />
+</div>
 </div>
 </section>
